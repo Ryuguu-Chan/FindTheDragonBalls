@@ -1,0 +1,36 @@
+* {
+	font-family: Arial;
+}
+
+header {
+	background: linear-gradient(180deg, rgba(171,0,255,1) 0%, rgba(16,0,255,1) 100%);
+}
+
+#Titre {
+	color:white;
+	font-family:Arial;
+	font-weight:bold;
+	text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+	font-size:50px;
+}
+
+#sTitre {
+	color:white;
+	font-family:Arial;
+	font-weight:bold;
+	text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+	text-align:center;
+}
+
+#mainGame {
+	border:solid black;
+	margin-top:20px;
+}
+
+a, a:visited {
+	color:white;
+}
+
+a:hover {
+	text-decoration: none;
+}

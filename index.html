@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Find the Crystal Ball! (β)</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style/s.css" />
+	</head>
+	<body onkeypress="KeyPressed()">
+		<header>
+			<table>
+				<tr>
+					<td><img src="img/bulma_R.png" title="bulma" /></td>
+					<td id="Titre">Find the Crystal Ball! (β)</td>
+				</tr>
+				<tr>
+					<td colspan="100" id="sTitre">Developped by Ogan Özkul aka Ryuguu Chan (<a href="https://twitter.com/ChanRyuguu" target="_blank">twitter</a>) (<a href="https://github.com/Ryuguu-Chan" target="_blank">github</a>)<br/><br/></td>
+				</tr>
+			</table>
+		</header>
+			<div id="main">
+				<!-- The main front-end part -->
+				<canvas id="mainGame" width="500" height="500">
+					<!-- gfx -->
+					
+					<!-- if the web browser is uncapable to compute anything -->
+					<p>Your browser doesn't have the faculty of computing a simple canvas code... shameful</p>
+				</canvas>
+				<button onclick="MakeLevel();" id="makeL">Make Random Level</button><p id="success"></p>
+				<p id="points">Points : </p>
+				<script src="script/dbz.js"></script>
+			</div>
+	</body>
+</html>
