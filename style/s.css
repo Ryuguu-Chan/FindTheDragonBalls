@@ -27,6 +27,10 @@ header {
 	margin-top:20px;
 }
 
+.pButton {
+	padding: 32px 16px;
+}
+
 a, a:visited {
 	color:white;
 }

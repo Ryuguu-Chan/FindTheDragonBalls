@@ -217,7 +217,6 @@ function Refresh()
 // but by translating the whole game world from a coordinate or another using some simple calculations according the direction which the player moves
 function MovePlayer(direction)
 {
-	
 	for (x = 0; x <= Balls.length - 1; ++x)
 	{
 		switch(direction)
@@ -252,6 +251,12 @@ function MovePlayer(direction)
 						BlackScreen.fillRect(0,0,winX,winY);
 						++Wins;
 						RandomFactor+=50;
+						
+						bRandomLevel.disabled = false;
+						document.getElementById('left').disabled = true;
+						document.getElementById('right').disabled = true;
+						document.getElementById('up').disabled = true;
+						document.getElementById('down').disabled = true;
 					}
 					break;
 				}
@@ -328,5 +333,14 @@ function MakeLevel()
 
 	GameStarted = GameStarted   == false ? true : true;
 	PartyStarted = PartyStarted == false ? true : true;
+
+	if (GameStarted == true)
+	{
+		bRandomLevel.disabled = true;
+		document.getElementById('left').disabled = false;
+		document.getElementById('right').disabled = false;
+		document.getElementById('up').disabled = false;
+		document.getElementById('down').disabled = false;
+	}
 
 }
