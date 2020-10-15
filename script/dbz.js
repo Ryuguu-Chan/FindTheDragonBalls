@@ -4,7 +4,7 @@ class CrystalBall
 	// it's constructor
 	constructor(numero = null, locationX = null, locationY = null)
 	{
-		this.Num 	= numero;	// le numero de la boule
+		this.Num 	= numero;		// le numero de la boule
 		this.LocX 	= locationX;	// la localisation de la boule X sur la carte
 		this.LocY 	= locationY;	// la localisation de la boule Y sur la carte
 	}
@@ -93,7 +93,7 @@ for (x = 0; x < winX; x+=GridGap)
 	// drawing the lines
 	GridLine.moveTo(x,0);		// point de depart
 	GridLine.lineTo(x,winX);	// point de terminaison
-	GridLine.stroke();		// tracer de point A au point B
+	GridLine.stroke();			// tracer de point A au point B
 }
 
 // Making rows 
@@ -135,9 +135,9 @@ function DrawBall(b)
 	ballCircle.beginPath();
 	ballCircle.arc
 	(
-		(b.LocX),		// center's x 
-		(b.LocY),		// center's y 
-		(10),			// rayon
+		(b.LocX),			// center's x 
+		(b.LocY),			// center's y 
+		(10),				// rayon
 		(0 * Math.PI),		// starting angle
 		(2 * Math.PI),		// ending angle
 	);
@@ -154,10 +154,10 @@ function KeyPressed()
 	{
 		switch(event.keyCode)
 		{
-			case 119: /* W */ MovePlayer(119);  break; 	// *.LocY+=250 (For every dragon ball's coordinate)
-			case 97:  /* A */ MovePlayer(97);   break; 	// *.LocX+=250 (For every dragon ball's coordinate)
-			case 115: /* S */ MovePlayer(115);  break; 	// *.LocY-=250 (For every dragon ball's coordinate)
-			case 100: /* D */ MovePlayer(100);	break; 	// *.LocX-=250 (For every dragon ball's coordinate)
+			case 119: /* W */ MovePlayer(119);  break; // *.LocY+=250 (For every dragon ball's coordinate)
+			case 97:  /* A */ MovePlayer(97);   break; // *.LocX+=250 (For every dragon ball's coordinate)
+			case 115: /* S */ MovePlayer(115);  break; // *.LocY-=250 (For every dragon ball's coordinate)
+			case 100: /* D */ MovePlayer(100);	break; // *.LocX-=250 (For every dragon ball's coordinate)
 		}
 	}
 }
@@ -181,9 +181,9 @@ function Refresh()
 	for (x = 0; x < winX; x+=GridGap) 
 	{
 		// Drawing the lines
-		this.GridLine.moveTo(x,0);	// point de depart
+		this.GridLine.moveTo(x,0);		// point de depart
 		this.GridLine.lineTo(x,winX);	// point de terminaison
-		this.GridLine.stroke();		// tracer de point A au point B
+		this.GridLine.stroke();			// tracer de point A au point B
 	}
 
 	// making rows
