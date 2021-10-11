@@ -1,17 +1,36 @@
+@font-face {
+	font-family: DBZfont;
+	src: url(../fonts/Saiyan-Sans.ttf);
+}
+
+@font-face {
+	font-family: ComputerFont;
+	src: url("../fonts/6809 chargen.ttf");
+}
+
+body {
+	/*background-image: url("../img/sky.jpg");*/
+	background: url('../img/sky.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 * {
 	font-family: Arial;
 }
 
 header {
 	background: linear-gradient(180deg, rgba(171,0,255,1) 0%, rgba(16,0,255,1) 100%);
+	border: groove 20px yellow;
 }
 
 #Titre {
-	color:white;
-	font-family:Arial;
-	font-weight:bold;
+	color: white;
+	font-family: DBZfont;
 	text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
-	font-size:50px;
+	font-size: 50px;
 }
 
 #sTitre {
@@ -20,15 +39,67 @@ header {
 	font-weight:bold;
 	text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
 	text-align:center;
+	vertical-align:top;
+}
+
+#ballScoreText {
+	font-family: DBZfont;
+	color: #FFFF00;
+	font-size: 40px;
+
+	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
 }
 
 #mainGame {
-	border:solid black;
-	margin-top:20px;
+	border: solid black;
+	margin-top: 20px;
+}
+
+#BulmaPic {
+	vertical-align: bottom;
+}
+
+#MusicIcon > img{
+	margin-top: 20px;
+}
+
+#MusicIcon {
+	cursor: pointer;
+}
+
+#points {
+	font-family: ComputerFont;
+	font-size: 50px;
+	padding: 20px;
+	width: 500px;
+	border: solid white;
+	border-radius: 20px;
+	color: white;
+	text-shadow: 0px 0px 10px yellow;
+	background-color: darkgreen;
 }
 
 .pButton {
-	padding: 32px 16px;
+	font-family: DBZfont;
+	font-size: 50px;
+	cursor: pointer;
+	color: red;
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	visibility: hidden;
+	margin: 15px;
+}
+
+
+.pButton:hover {
+	color: darkred;
+}
+
+.pButton:active {
+	color: #550000;
 }
 
 a, a:visited {
@@ -39,11 +110,68 @@ a:hover {
 	text-decoration: none;
 }
 
+#makeL {
+	font-family: ComputerFont;
+	cursor: pointer;
+	background-color:red;
+	font-size:40px;
+	padding: 20px;
+}
+
 /* for phone user only :P */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
+	
 	#makeL {
 		padding: 32px 16px;
+		margin-bottom: 50px;
+		font-size: 20px;
+		margin-top:20px;
+		position: absolute;
+		left: 10px;
+		top: 900px;
+	}
+
+	#points {
+		margin-top:150px;
+	}
+
+	.pButton {
+		visibility: visible;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+
+	.pButton {
 		position: relative;
-		top: 50px;
+		top: -500px;
+	}
+
+	#points {
+		position: relative;
+		right: -700px;
+		top: -500px;
+	}
+
+	#ballScoreText {
+		position: relative;
+		right: -860px;
+		top: -350px;
+	}
+
+	#makeL {
+		position: relative;
+		right: -285px;
+		top: -220px;
+	}
+
+	#makeL:hover {
+		/*background-color: darkred;*/
+		top: -215px;
+	}
+
+	#makeL:active {
+		/*background-color: #550000;*/
+		top: -208px;
 	}
 }

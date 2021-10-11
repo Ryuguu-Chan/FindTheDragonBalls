@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Find the Crystal Ball! (β)</title>
+		<title>Find the Crystal Ball! v1.0</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="style/s.css" />
+		<script src="script/browser.js"></script>
+
+		<!-- adding some meta stuff here -->
+		<meta name="description" content="a free Open Source online Dragon Ball finding game" />
+		<meta name="keywords" content="dbz, game, web, html, css, javascript, ryuguu-chan, ogan, özkul, oezkul, anime, manga, cute" />
+		<meta name="author" content="Ogan Özkul aka Ryuguu - Chan" />
 	</head>
 	<body onkeypress="KeyPressed()">
+		<!--[if IE]>
+			<strong style="color: red;">THIS GAME DON'T WORK ON INTERNET EXPLORER!</strong>
+		<![endif]-->
 		<header>
 			<table>
 				<tr>
-					<td><!-- <img src="master/img/bulma_r.png" title="bulma" /> --> <!-- to be fixed! --></td>
-					<td id="Titre">Find the Crystal Ball! (β)</td>
+					<!-- the Bulma pic finnally appears :D -->
+					<td rowspan="100"><img id="BulmaPi" src="img/bulma_r.png" title="bulma" /></td>
+					<td id="Titre">Find the Crystal Ball! v1.0</td>
 				</tr>
 				<tr>
-					<td colspan="100" id="sTitre">Developped by Ogan Özkul aka Ryuguu Chan (<a href="https://twitter.com/ChanRyuguu" target="_blank">twitter</a>) (<a href="https://github.com/Ryuguu-Chan" target="_blank">github</a>)<br/><br/></td>
+					<td colspan="100" id="sTitre">Developped by Ogan Özkul aka Ryuguu Chan (<a href="https://twitter.com/ChanRyuguu" target="_blank">twitter</a>) (<a href="https://github.com/Ryuguu-Chan" target="_blank">github</a>) (<a href="https://www.buymeacoffee.com/ryuguuchan">Buy me coffee</a>)<br/><br/></td>
 				</tr>
 			</table>
 		</header>
-			<div id="main">
-				<!-- The main front-end part -->
-				<canvas id="mainGame" width="500" height="500">
-					<!-- gfx -->
-					
-					<!-- if the web browser is uncapable to compute anything -->
-					<p>Your browser doesn't have the faculty of computing a simple canvas code... shameful</p>
-				</canvas>
-				<button onclick="MakeLevel();" id="makeL">Make Random Level</button><p id="success"></p>
-				<p id="points">Points : </p>
-				<br/>
-				<button class="pButton" id="left" onclick="MovePlayer(97)" disabled="true">LEFT</button>
-				<button class="pButton" id="up" onclick="MovePlayer(119)" disabled="true">UP</button>
-				<button class="pButton" id="down" onclick="MovePlayer(115)" disabled="true">DOWN</button>
-				<button class="pButton" id="right" onclick="MovePlayer(100)" disabled="true">RIGHT</button>
-				<script src="script/dbz.js"></script>
-			</div>
+		<!--<p id="debugDisplay00"></p>-->
+		<a onclick="ActivateMusic()" id="MusicIcon"><img src="img/no_music.png" id="MusicIconImg" width="40px" /></a>
+		<div id="main">
+			<!-- The main front-end part -->
+			<canvas id="mainGame" width="500" height="500">
+				<!-- gfx -->
+				<!-- if the web browser is uncapable to compute anything -->
+				<p>Your browser doesn't have the faculty of computing a simple canvas code... shameful</p>
+			</canvas><br/>
+			<a class="pButton" id="left" onclick="TactileKeyPressed(97)">LEFT</a>&nbsp;&nbsp;&nbsp;
+			<a class="pButton" id="up" onclick="TactileKeyPressed(119)">UP</a>&nbsp;&nbsp;&nbsp;
+			<a class="pButton" id="down" onclick="TactileKeyPressed(115)">DOWN</a>&nbsp;&nbsp;&nbsp;
+			<a class="pButton" id="right" onclick="TactileKeyPressed(100)">RIGHT</a>
+			<a onclick="MakeLevel()" id="makeL">START THE GAME</a>
+			<p id="points">SCORE : </p>
+			<p id="ballScoreText">Drag<span style="color: orange; font-family: DBZfont">o</span>n<span style="color:red; font-family: DBZfont">balls</span> : <span id="ballpoints">0</span>/7</p>
+			<br />
+			<script src="script/gfx.js"></script>
+			<script src="script/bgm.js"></script>
+			<script src="script/dragonball.js"></script>
+			<script src="script/dbz.js"></script>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,18 @@
+* {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+a:hover {
+    color: lightgrey;
+}
+
+a:active {
+    color: gray;
+}
+
+a:visited {
+    color: white;
+}
